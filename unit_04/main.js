@@ -3,7 +3,7 @@ let vueApp = new Vue({
     data: {
         // ros connection
         ros: null,
-        rosbridge_address: 'wss://i-07e2e1dab96c37be6.robotigniteacademy.com/af558d4f-5227-4fce-a2b2-2ff614102936/rosbridge/',
+        rosbridge_address: 'wss://i-085b4acb4e840851d.robotigniteacademy.com/168606c0-8f5d-40f1-bb20-86ceb48094d8/rosbridge/',
         connected: false,
         // subscriber data
         position: { x: 0, y: 0, z: 0, },
