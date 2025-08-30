@@ -52,7 +52,12 @@
                             <button class="mt-2 btn btn-primary" :disabled="!connected" @click="sendCommand">Move the robot!</button>
                             <button class="mt-2 btn btn-primary" :disabled="!connected" @click="turnRight">Turn right!</button>
                             <button class="mt-2 btn btn-danger" :disabled="!connected" @click="stop">Stop!</button>
+                            <br>
+                            <button class="mt-2 btn btn-primary" :disabled="!connected" @click="turnOnFenceMode">Turn on fence mode</button>
+                            <button class="mt-2 btn btn-danger" :disabled="!connected" @click="turnOffFenceMode">Turn off fence mode</button>
                             <hr>
+
+
                             <p>Subscribing robot data</p>
                             <p>
                                 <span>X: {{ position.x.toFixed(2) }}</span>

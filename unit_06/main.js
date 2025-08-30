@@ -42,19 +42,17 @@ var app = new Vue({
             // define the service to be called
             let service = new ROSLIB.Service({
                 ros: this.ros,
-                name: '/example_service',
-                serviceType: 'std_srvs/SetBool',
+                name: '/get_battery_level',
+                serviceType: 'example_interfaces/Trigger',
             })
 
             // define the request
-            let request = new ROSLIB.ServiceRequest({
-                data: true,
-            })
+            let request = new ROSLIB.ServiceRequest({});
 
             // define a callback
             service.callService(request, (result) => {
                 this.service_busy = false
-                this.service_response = JSON.stringify(result)
+                this.service_response = `Battery Level: ${result.message}%`;
             }, (error) => {
                 this.service_busy = false
                 console.error(error)
